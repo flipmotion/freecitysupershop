@@ -71,4 +71,24 @@ $(document).ready(function() {
 		  e.stopPropagation();
 		}
 	});
+	$('[data-target="login"]').on('click', function(){
+		$(this).parent().parent().remove();
+		$('[data-item="login"]').show();
+		
+	});
+	$('[data-target="create-acc"]').on('click', function(){
+		$(this).parent().parent().remove();
+		$('[data-item="create-acc"]').show();
+		
+	});
+	$('[data-target="registered"]').on('click', function(){
+		$(this).parent().parent().remove();
+		$('[data-item="registered"]').show();
+		
+	});
+	$('[data-target="whish-list"]').on('click', function(){
+		$(this).parent().parent().remove();
+		$('[data-item="whish-list"]').show();
+		
+	});
 });

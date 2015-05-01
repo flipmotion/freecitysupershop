@@ -42,7 +42,43 @@
 	}
 	.dropdown.open {
 		.my-icon.bag {
-			background-position: top center;
+			background-position: top 2px center;
 		}
+	}
+	.whish-list,
+	.registered,
+	.create-acc,
+	.login-form {
+		display: none;
+	}
+	.squaredFour {
+		position: relative;
+		input {
+			display: none;
+		}
+	}
+
+	.squaredFour label {
+		cursor: pointer;
+		padding-left: 20px;
+		top: 0;
+		font-weight: 400;
+		font-size: 12px;
+	}
+
+	.squaredFour label:after {
+		opacity: 1;
+		content: '';
+		position: absolute;
+		width: 18px;
+		height: 20px;
+		background: url(../img/check.png) no-repeat bottom left;
+		background-size: contain;
+		top: -2px;
+		left: 0px;
+	}
+	.squaredFour input[type=checkbox]:checked + label:after {
+		background: url(../img/check-in.png) no-repeat bottom left;
+		background-size: contain;
 	}
 }
