@@ -69,26 +69,39 @@ $(document).ready(function() {
 	$('.my-dropdown-menu.dropdown-menu').on({
 		"click":function(e){
 		  e.stopPropagation();
+		  $('[role="tabpanel"] a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
 		}
 	});
 	$('[data-target="login"]').on('click', function(){
 		$(this).parent().parent().remove();
 		$('[data-item="login"]').show();
+		$('[data-menu="settings"]').removeClass('settings-active');
 		
 	});
 	$('[data-target="create-acc"]').on('click', function(){
 		$(this).parent().parent().remove();
 		$('[data-item="create-acc"]').show();
+		$('[data-menu="settings"]').removeClass('settings-active');
 		
 	});
 	$('[data-target="registered"]').on('click', function(){
 		$(this).parent().parent().remove();
 		$('[data-item="registered"]').show();
+		$('[data-menu="settings"]').removeClass('settings-active');
 		
 	});
 	$('[data-target="whish-list"]').on('click', function(){
 		$(this).parent().parent().remove();
 		$('[data-item="whish-list"]').show();
+		$('[data-menu="settings"]').removeClass('settings-active');
 		
+	});
+	$('[data-target="settings"]').on('click', function(){
+		$(this).parent().parent().remove();
+		$('[data-item="settings"]').show();
+		$('[data-menu="settings"]').addClass('settings-active');
 	});
 });
